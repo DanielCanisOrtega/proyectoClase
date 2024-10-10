@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'portal.apps.PortalConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -72,13 +73,23 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
-
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+    "default": {
+        "ENGINE": "django.db.backends.sqlite3",
+        "NAME": "mydatabase",
     }
 }
+
+"""DATABASES = {
+    'default': {
+        "ENGINE": "django.db.backends.mysql",
+        "NAME": "",
+        "USER": "root",
+        "PASSWORD": "UFPS2024",
+        "HOST": "129.146.249.153",
+        "PORT":"3385",
+    }
+}"""
 
 
 # Password validation
